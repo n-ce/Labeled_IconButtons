@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: black;
+  color: white
+}
+
+ico-btn{
+  width: 50vw;
+}
+@media(min-width:600px){
+  body{
+    grid-template-columns: auto auto auto auto;
+  }
+  ico-btn{
+    width: 25vw;
+  }
+}
+
+/*
+button {
+  font-size: 1.5rem;
+  padding: 0;
+  background: none;
+  color: white;
+  border: none;
+}
+
+button i {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1rem;
+}
+
+button p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+button:active i {
+  background: white;
+  color: black;
+}

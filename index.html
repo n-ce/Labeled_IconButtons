@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Web Components</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="iconButton.js"></script>
+</head>
+
+<body>
+  <ico-btn>I'm a WebComponent!</ico-btn>
+  <script>
+    document.querySelector('ico-btn').addEventListener('click', () => {
+      const ibtn = document.createElement('ico-btn');
+      ibtn.innerText = document.body.childElementCount;
+      document.body.append(ibtn);
+    });
+  </script>
+</body>
+
+</html>
