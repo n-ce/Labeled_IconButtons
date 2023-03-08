@@ -18,24 +18,23 @@ template.innerHTML = `
     width:100%;
     background-color:#fff7;
     border-radius:1rem;
-    
   }
   </style>
-  <button type="button">
-    <img
-      src="https://img.icons8.com/color/512/web-components.png"
-      alt="webcomponent logo"
-    >
+  <button>
+    <img>
     <p><slot></slot></p>
   </button>
 `;
 
 class IconButton extends HTMLElement {
   constructor() {
-    super()
-    const shadow = this.attachShadow({ mode: "open" })
-    shadow.append(template.content.cloneNode(true));
-
+    super();
+    
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('img').src = this.dataset.icon;
+    
+    
   }
 }
-customElements.define("ico-btn", IconButton)
+window.customElements.define("ico-btn", IconButton)

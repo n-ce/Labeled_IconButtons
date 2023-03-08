@@ -6,18 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learning Web Components</title>
   <link rel="stylesheet" href="index.css">
-  <script src="iconButton.js"></script>
+
 </head>
 
 <body>
-  <ico-btn>I'm a WebComponent!</ico-btn>
-  <script>
-    document.querySelector('ico-btn').addEventListener('click', () => {
-      const ibtn = document.createElement('ico-btn');
-      ibtn.innerText = document.body.childElementCount;
-      document.body.append(ibtn);
-    });
-  </script>
+  <ico-btn
+  data-icon="https://img.icons8.com/color/512/web-components.png"
+  onclick="document.body.innerHTML +='<ico-btn data-icon='+prompt('Enter Icon Link')+'>'+prompt('Enter Button Name')+'</ico-btn>'"
+  >I'm a Web Component!</ico-btn>
+
+  <script src="iconButton.js"></script>
 </body>
 
 </html>
