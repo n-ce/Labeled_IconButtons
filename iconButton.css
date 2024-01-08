@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  animation:appear 1s;
+}
+:host{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:calc(50vmin - 2rem);
+  width:50vmin;
+}
+
+button {
+  background-color: #7777;
+  border: none;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+img{
+  width:calc(100% - 2rem);
+}
+
+slot {
+  position:fixed;
+  display:block;
+  width:50vmin;
+  font-weight: bold;
+  line-height: 2rem;
+  background-color: #fff7;
+  border-radius: 1rem;
+}
+
+
+/* loader */
+div {
+  border: 1vmin solid transparent;
+  border-radius: 50%;
+  border-top: 1vmin solid white;
+  width: 10vmin;
+  height: 10vmin;
+  animation: spin 750ms cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform: scale(0);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}

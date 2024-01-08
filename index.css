@@ -1,26 +1,15 @@
 html,
 body {
   height: 100%;
-  width:100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color: white
-}
-
-ico-btn{
-  width: 50vw;
-}
-@media(min-width:600px){
-  body{
-    grid-template-columns: auto auto auto auto;
-  }
-  ico-btn{
-    width: 25vw;
-  }
 }
