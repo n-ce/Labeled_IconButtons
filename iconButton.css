@@ -15,18 +15,17 @@
 button {
   background-color: #7777;
   border: none;
-  overflow: hidden;
   border-radius: 1rem;
 }
 
 img{
-  width:calc(100% - 2rem);
+  height:100%;
+  width:100%;
 }
 
 slot {
-  position:fixed;
   display:block;
-  width:50vmin;
+  width:auto;
   font-weight: bold;
   line-height: 2rem;
   background-color: #fff7;
